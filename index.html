@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Document</title>
+</head>
+<body onload="currentTime()">
+    <nav class="main-header">
+        <h1>Logo Placeholder</h1>
+        <img src="IMG/menu.svg" alt="MENU" onclick="toggleNav()">
+    </nav>
+
+    <div class="main-nav">
+        <div class="full-nav">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li>
+                    <a href="">Workshop</a>
+                    <div class="drop-down" onclick="toggleDrop()"></div>
+                    <ul id="dropdown-menu-one">
+                        <li><a href="">Option 1</a></li>
+                        <li><a href="">Option 2</a></li>
+                        <li><a href="">Option 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="">About</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="section-one">
+        <h1>Time Management Workshop</h1>
+        <div class="clock">
+            <h1 id="clock" style="color:black;"></h1>
+            <p id="seconds"></p>
+        </div>
+        <p>Do you manage your time?</p>
+    </section>
+</body>
+
+<script src="JS/script.js"></script>
+<script src="JS/time.js"></script>
+
+</html>
