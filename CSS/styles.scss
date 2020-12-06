@@ -6,10 +6,19 @@ body, * {
     font-family: "Montserrat", sans-serif;
 }
 
+body {
+    width: 100%;
+    overflow: hidden;
+}
+
 .main-header {
     display: flex;
     justify-content: space-between;
     padding: 0.7em 1em;
+
+    img {
+        height: 35px;
+    }
 }
 
 .main-nav {
@@ -42,7 +51,7 @@ body, * {
 
                 .drop-down {
                     height: clamp(15px, 15vw, 33px);
-                    background-image: url("/IMG/Arrow\ Down\ White.svg");
+                    background-image: url("/IMG/Arrow Down White.svg");
                     width: clamp(15px, 15vw, 33px);
                     background-size: 90%;
                     background-repeat: no-repeat;
@@ -75,4 +84,27 @@ body, * {
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin: 1.5em 0;
+
+    h1 {
+        font-size: clamp(33px, 13vw, 70px);
+    }
+
+    p {
+        font-size: clamp(20px, 10vw, 45px);
+        margin-top: 0.4em;
+    }
+
+    .clock-container {
+        text-align: center;
+        outline: black 5px solid;
+        padding: 15px;
+        margin: 3em 1.5em 0 1.5em;
+        font-style: italic;
+
+        #clock{  
+            font-size: clamp(45px, 13vw, 85px);
+            font-weight: 400;
+        }
+    }
 }

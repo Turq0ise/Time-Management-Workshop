@@ -6,8 +6,7 @@ function currentTime() {
     var minutes = updateTime(date.getMinutes());
     var seconds = updateTime(date.getSeconds());
 
-    document.querySelector("#clock").innerHTML = hours + ":" + minutes + midday;
-    document.querySelector("#seconds").innerHTML = seconds + " seconds"
+    document.querySelector("#clock").innerHTML = hours + ":" + minutes + ":" + seconds + midday;
     var t = setTimeout(currentTime, 1000);
 }
 

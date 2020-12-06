@@ -5,6 +5,11 @@ body, * {
   font-family: "Montserrat", sans-serif;
 }
 
+body {
+  width: 100%;
+  overflow: hidden;
+}
+
 .main-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13,6 +18,10 @@ body, * {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0.7em 1em;
+}
+
+.main-header img {
+  height: 35px;
 }
 
 .main-nav {
@@ -77,5 +86,28 @@ body, * {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+  margin: 1.5em 0;
+}
+
+.section-one h1 {
+  font-size: clamp(33px, 13vw, 70px);
+}
+
+.section-one p {
+  font-size: clamp(20px, 10vw, 45px);
+  margin-top: 0.4em;
+}
+
+.section-one .clock-container {
+  text-align: center;
+  outline: black 5px solid;
+  padding: 15px;
+  margin: 3em 1.5em 0 1.5em;
+  font-style: italic;
+}
+
+.section-one .clock-container #clock {
+  font-size: clamp(45px, 13vw, 85px);
+  font-weight: 400;
 }
 /*# sourceMappingURL=styles.css.map */

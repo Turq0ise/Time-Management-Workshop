@@ -7,7 +7,8 @@ function toggleNav() {
     if(toggleNavStatus === false) {
         getNavBar.style.visibility = "visible";
         toggleNavStatus = true;
-    }else if(toggleNavStatus === true) {
+    }
+    else if(toggleNavStatus === true) {
         getNavBar.style.visibility = "hidden";
         toggleNavStatus = false;
     }
@@ -21,7 +22,8 @@ function toggleDrop() {
         getDropDown.style.display = "block";
         getDropDownIcon.style.transform = "scaleY(-1)"
         toggleDropStatus = true;
-    }else if(toggleDropStatus === true) {
+    }
+    else if(toggleDropStatus === true) {
         getDropDown.style.display = "none";
         getDropDownIcon.style.transform = "scaleY(1)"
         toggleDropStatus = false;
