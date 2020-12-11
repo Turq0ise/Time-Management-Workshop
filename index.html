@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/styles.css">
-    <title>Document</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="Site Icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Site Icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Site Icon/favicon-16x16.png">
+    <link rel="manifest" href="Site Icon/site.webmanifest">
+    <link rel="mask-icon" href="Site Icon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>Time Workshop</title>
 </head>
 <body onload="currentTime()">
     <div class="fixed-bar">
@@ -19,11 +26,11 @@
             <ul>
                 <li><a href="">Home</a></li>
                 <li>
-                    <a href="">Workshop</a>
+                    <a href="#">Workshop</a>
                     <div class="drop-down" onclick="toggleDrop()"></div>
                     <ul id="dropdown-menu-one">
                         <li><a href="">Dry Run Workshop</a></li>
-                        <li><a href="">Final Workshop</a></li>
+                        <li><a href="#" onclick="comingSoon()">Final Workshop</a></li>
                     </ul>
                 </li>
                 <li><a href="">About</a></li>
