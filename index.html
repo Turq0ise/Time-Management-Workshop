@@ -7,11 +7,13 @@
     <title>Document</title>
 </head>
 <body onload="currentTime()">
-    <nav class="main-header">
-        <img src="IMG/Time Logo.png" alt="">
-        <img src="IMG/menu.svg" alt="MENU" onclick="toggleNav()">
-    </nav>
-
+    <div class="fixed-bar">
+        <nav class="main-header">
+            <img src="IMG/Time Logo.png" alt="">
+            <img src="IMG/menu.svg" onclick="toggleNav()" class="menuImage">
+        </nav>
+    </div>
+    
     <div class="main-nav">
         <div class="full-nav">
             <ul>
@@ -20,9 +22,8 @@
                     <a href="">Workshop</a>
                     <div class="drop-down" onclick="toggleDrop()"></div>
                     <ul id="dropdown-menu-one">
-                        <li><a href="">Option 1</a></li>
-                        <li><a href="">Option 2</a></li>
-                        <li><a href="">Option 3</a></li>
+                        <li><a href="">Dry Run Workshop</a></li>
+                        <li><a href="">Final Workshop</a></li>
                     </ul>
                 </li>
                 <li><a href="">About</a></li>
@@ -30,14 +31,25 @@
         </div>
     </div>
 
-    <section class="section-one">
-        <h1>Time Management Workshop</h1>
+    <section class="section-one hw-auto section-auto">
+        <h1 id="main-title">Time Management Workshop</h1>
         <p>Do you manage your time?</p>
         <div class="clock-container">
             <h1 id="clock"></h1>
         </div>
     </section>
 
+    <section class="section-two hw-auto section-auto">
+        <h1>Dry Run Workshop</h1>
+        <p>Results of our Dry Run Workshop.</p>
+        <button onclick="openFile()">Learn More.</button>
+    </section>
+
+    <section class="section-three hw-auto section-auto">
+        <h1>Final Workshop</h1>
+        <p>Coming Soon.</p>
+        <button onclick="comingSoon()">Learn More</button>
+    </section>
 
 </body>
 

@@ -7,10 +7,32 @@ body, * {
 
 body {
   width: 100%;
-  overflow: hidden;
+  overflow-X: hidden;
 }
 
-.main-header {
+body h1 {
+  font-size: clamp(33px, 13vw, 70px);
+}
+
+body p {
+  font-size: clamp(20px, 10vw, 45px);
+}
+
+.hw-auto {
+  height: auto;
+  width: 100%;
+}
+
+.fixed-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.815);
+}
+
+.fixed-bar .main-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,7 +42,7 @@ body {
   padding: 0.7em 1em;
 }
 
-.main-header img {
+.fixed-bar .main-header img {
   height: 35px;
 }
 
@@ -28,8 +50,9 @@ body {
   height: 100vh;
   width: 100%;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.93);
   visibility: hidden;
+  margin-top: 1em;
 }
 
 .main-nav .full-nav {
@@ -75,9 +98,14 @@ body {
   font-style: italic;
 }
 
-.section-one {
-  height: auto;
-  width: 100%;
+.main-nav .full-nav ul li #dropdown-menu-one li::before {
+  content: "\2022";
+  color: white;
+  font-size: 55px;
+  font-weight: 500;
+}
+
+.section-auto {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,16 +113,17 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-align: center;
-  margin: 1.5em 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2.5em 0.5em;
 }
 
-.section-one h1 {
-  font-size: clamp(33px, 13vw, 70px);
+.section-one #main-title {
+  margin-top: 0.4em;
 }
 
 .section-one p {
-  font-size: clamp(20px, 10vw, 45px);
   margin-top: 0.4em;
 }
 
@@ -102,12 +131,47 @@ body {
   text-align: center;
   outline: black 5px solid;
   padding: 15px;
-  margin: 3em 1.5em 0 1.5em;
+  margin: 3em 1.5em 0 0.5em;
   font-style: italic;
 }
 
 .section-one .clock-container #clock {
-  font-size: clamp(45px, 13vw, 85px);
+  font-size: clamp(35px, 13vw, 85px);
   font-weight: 400;
+}
+
+.section-two, .section-three {
+  margin-bottom: 3em;
+}
+
+.section-two p, .section-three p {
+  margin: 0.45em 0;
+}
+
+.section-two button, .section-three button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px;
+  border: solid 2px black;
+  border-radius: 8px;
+  font-style: italic;
+  cursor: pointer;
+  margin-left: 1em;
+}
+
+.section-two .error, .section-three .error {
+  color: red;
+  font-size: 20px;
+  padding: 8px;
+  border-radius: 8px;
+  border: solid 2px red;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 1em;
+  visibility: hidden;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 /*# sourceMappingURL=styles.css.map */
