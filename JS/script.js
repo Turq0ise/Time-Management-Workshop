@@ -3,16 +3,13 @@ var toggleDropStatus = false;
 
 function toggleNav() {
     var getNavBar = document.querySelector(".main-nav");
-    var menuImage = document.querySelector(".menuImage")
 
     if(toggleNavStatus === false) {
         getNavBar.style.visibility = "visible";
-        menuImage.src = "../IMG/Exit.svg"
         toggleNavStatus = true;
     }
     else if(toggleNavStatus === true) {
         getNavBar.style.visibility = "hidden";
-        menuImage.src = "../IMG/menu.svg"
         toggleNavStatus = false;
     }
 }
