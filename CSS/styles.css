@@ -3,11 +3,11 @@ body, * {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
+  overflow-X: hidden;
 }
 
 body {
   width: 100%;
-  overflow-X: hidden;
 }
 
 body h1 {
@@ -30,6 +30,7 @@ body p {
   margin: auto;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.815);
+  visibility: visible;
 }
 
 .fixed-bar .main-header {
@@ -46,16 +47,23 @@ body p {
   height: 35px;
 }
 
-.fixed-bar-two {
+.main-nav {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.93);
+  visibility: hidden;
+}
+
+.main-nav .fixed-bar-two {
   position: fixed;
   top: 0;
   left: 0;
   margin: auto;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.93);
 }
 
-.fixed-bar-two .sub-header {
+.main-nav .fixed-bar-two .sub-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,17 +73,8 @@ body p {
   padding: 0.7em 1em;
 }
 
-.fixed-bar-two .sub-header img {
+.main-nav .fixed-bar-two .sub-header img {
   height: 35px;
-}
-
-.main-nav {
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.93);
-  visibility: hidden;
-  margin-top: 1em;
 }
 
 .main-nav .full-nav {
@@ -158,7 +157,7 @@ body p {
   text-align: center;
   outline: black 5px solid;
   padding: 15px;
-  margin: 3em 1.5em 0 0.5em;
+  margin: 3em 0.5em;
   font-style: italic;
 }
 
@@ -168,10 +167,10 @@ body p {
 }
 
 .section-two, .section-three {
+  color: white;
+  background-color: black;
   padding: 0 0.5em;
   padding-bottom: 1em;
-  background-color: black;
-  color: white;
 }
 
 .section-two h1, .section-three h1 {
@@ -183,32 +182,67 @@ body p {
 }
 
 .section-two button, .section-three button {
+  color: white;
+  font-size: 16px;
+  font-style: italic;
+  border: solid 2px white;
+  border-radius: 8px;
+  background-color: black;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 10px;
-  border: solid 2px white;
-  border-radius: 8px;
-  font-style: italic;
-  cursor: pointer;
   margin-left: 1em;
   margin-bottom: 60px;
+  cursor: pointer;
+}
+
+.section-two button a, .section-three button a {
+  color: white;
+  text-decoration: none;
+}
+
+#page-two {
   background-color: black;
+}
+
+#page-two .fixed-bar {
+  background-color: black;
+}
+
+#page-two .section-one {
   color: white;
 }
 
-.section-two .error, .section-three .error {
-  color: red;
-  font-size: 20px;
-  padding: 8px;
-  border-radius: 8px;
-  border: solid 2px red;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-top: 1em;
-  visibility: hidden;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+#page-two .section-one .clock-container {
+  outline: white 5px solid;
+}
+
+#page-two .section-two {
+  color: black;
+  background-color: white;
+}
+
+#page-two .section-two button {
+  color: black;
+  background-color: white;
+  border: black 2px solid;
+}
+
+#page-two .section-two button a {
+  color: black;
+}
+
+/* Responsiveness */
+@media (min-width: 1120px) {
+  .section-one {
+    text-align: center;
+  }
+  .section-one .clock-container {
+    margin: 3em 1.5em;
+  }
+  .section-two, .section-three {
+    padding: 0 3.8em;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

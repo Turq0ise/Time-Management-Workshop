@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <!--Used for the icon on the tab-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../Site Icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../Site Icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../Site Icon/favicon-16x16.png">
+    <link rel="manifest" href="../Site Icon/site.webmanifest">
+    <link rel="mask-icon" href="../Site Icon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!--Used for the icon on the tab-->
+    <title>Time Workshop</title>
+</head>
+<body onload="currentTime()" id="page-two">
+    <div class="fixed-bar">
+        <nav class="main-header">
+            <a href="../index.html"><img src="../IMG/Time Logo White.png" alt=""></a>
+            <img src="../IMG/Menu White.svg" onclick="toggleNav()" class="menuImage">
+        </nav>
+    </div>
+    
+    <div class="main-nav">
+        <div class="fixed-bar-two">
+            <nav class="sub-header">
+                <img src="../IMG/Time Logo White.png" alt="">
+                <img src="../IMG/Exit White.svg" onclick="toggleNav()" class="menuImage">
+            </nav>
+        </div>
+        <div class="full-nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li>
+                    <a href="../index.html#Workshops">Workshop</a>
+                    <div class="drop-down" onclick="toggleDrop()"></div>
+                    <ul id="dropdown-menu-one">
+                        <li><a href="#">Dry-Run Workshop</a></li>
+                        <li><a href="#" onclick="comingSoon()">Final Workshop</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="section-one hw-auto section-auto">
+        <h1 id="main-title">Dry-Run Workshop</h1>
+        <div class="clock-container">
+            <h1 id="clock"></h1>
+        </div>
+    </section>
+
+    <section class="section-two hw-auto section-auto">
+        <h1>Dry Run Workshop</h1>
+        <p>Results of our Dry Run Workshop.</p>
+        <button><a href="#">Learn More.</a></button>
+    </section>
+
+</body>
+
+<script src="../JS/script.js"></script>
+<script src="../JS/time.js"></script>
+
+</html>

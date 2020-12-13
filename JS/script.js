@@ -3,13 +3,16 @@ var toggleDropStatus = false;
 
 function toggleNav() {
     var getNavBar = document.querySelector(".main-nav");
+    var getMainHeader = document.querySelector(".fixed-bar");
 
     if(toggleNavStatus === false) {
         getNavBar.style.visibility = "visible";
+        getMainHeader.style.visibility = "hidden";
         toggleNavStatus = true;
     }
     else if(toggleNavStatus === true) {
         getNavBar.style.visibility = "hidden";
+        getMainHeader.style.visibility = "visible";
         toggleNavStatus = false;
     }
 }
@@ -34,6 +37,4 @@ function comingSoon() {
     alert("Coming Soon!")
 }
 
-function openFile() {
-    open("https://www.youtube.com")
-}
+console.log(window.innerWidth);
