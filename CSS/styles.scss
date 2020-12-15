@@ -4,11 +4,11 @@ body, * {
     margin: 0;
     padding: 0;
     font-family: "Montserrat", sans-serif;
-    overflow-X: hidden;
 }
 
 body {
-    width: 100%;
+    width: 100vw;
+    overflow-x: hidden;
 
     h1 {
         font-size: clamp(33px, 13vw, 70px);
@@ -21,7 +21,7 @@ body {
 
 .hw-auto {
     height: auto;
-    width: 100%;
+    width: 100vw;
 }
 
 .fixed-bar {
@@ -32,6 +32,7 @@ body {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.815);
     visibility: visible;
+    z-index: 100;
 
     .main-header {
         display: flex;
@@ -50,6 +51,7 @@ body {
     position: fixed;
     background-color: rgba(0, 0, 0, 0.93);
     visibility: hidden;
+    z-index: 100;
 
     .fixed-bar-two {
         position: fixed;
@@ -194,31 +196,48 @@ body {
 }
 
 #page-two {
-    background-color: black;
+    width: 100vw;
 
     .fixed-bar {
         background-color: black;
     }
 
     .section-one {
+        background-color: black;
         color: white;
+        margin: 0;
+        padding: 0 0.5em;
 
         .clock-container {
             outline: white 5px solid;
         }
     }
 
-    .section-two{
-        color: black;
+    .main-article {
         background-color: white;
+        margin: 1em 0.3em;
+        
+        .sub-article {
+            width: 90%;
 
-        button {
-            color: black;
-            background-color: white;
-            border: black 2px solid;
+            video, img {
+                width: 75%;
+                height: auto;
+                margin: 0.8em 0;
+            }
 
-            a {
-                color: black;
+            .sub-content {
+                margin: 1.8em 0;
+
+                .questions {
+                    font-size: clamp(10px, 10vw, 35px);
+                }
+    
+                .answers {
+                    font-size: clamp(8px, 10vw, 23px);
+                    text-decoration: underline;
+                    margin-top: 0.3em;
+                }
             }
         }
     }
@@ -237,5 +256,13 @@ body {
 
     .section-two, .section-three {
         padding: 0 3.8em;
+    }
+
+    .main-article {
+        padding: 0 3.8em;
+
+        video, img {
+            width: 60%;
+        }
     }
 }
